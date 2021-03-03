@@ -1,0 +1,36 @@
+
+
+.footer{
+    width: 100%;
+    background: linear-gradient(var(--col-bg-primary), var(--col-bg-secondary));
+    border-top: 2px solid var(--col-border-primary);
+    padding: var(--size-medium) 0;
+
+    .footer__buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        * {
+            padding: 0 var(--size-medium);
+            justify-self: center;
+            align-self: center;
+        }
+        button{
+            padding: 0;
+            border: none;
+            background: none;
+
+            img {
+                padding: 0;
+            }
+
+            &:active {
+                transform: translateY(5px);
+            }
+
+            &:active, &:focus{
+                outline: none;
+            }
+        }
+    }
+}

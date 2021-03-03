@@ -1,0 +1,77 @@
+/*
+    We're using a modified ABEM + CSS Grid structure for this project.
+        What is modified is just that modifieers are seperated so something like "grid --wide" "nav__item --dark"
+        this lets use the power of SASS to compile things for us, while still writing clean code
+
+    This file is for layouts of internal things. They should not define any visual styles, just where things live.
+ */
+.full-screen {
+    width: 100%;
+    height: 100%;
+    padding: var(--size-large);
+}
+
+.grid {
+    display: grid;
+    row-gap: var(--size-medium);
+    column-gap: var(--size-medium);
+
+    &.--col-1-auto { grid-template-columns: repeat(1, auto); }
+    &.--col-2-auto { grid-template-columns: repeat(2, auto); }
+    &.--col-3-auto { grid-template-columns: repeat(3, auto); }
+    &.--col-4-auto { grid-template-columns: repeat(4, auto); }
+    &.--col-5-auto { grid-template-columns: repeat(5, auto); }
+    &.--col-6-auto { grid-template-columns: repeat(6, auto); }
+    &.--col-7-auto { grid-template-columns: repeat(7, auto); }
+    &.--col-8-auto { grid-template-columns: repeat(8, auto); }
+    &.--col-9-auto { grid-template-columns: repeat(9, auto); }
+    &.--col-10-auto { grid-template-columns: repeat(10, auto); }
+
+    &.--col-1-even { grid-template-columns: repeat(1, 1fr); }
+    &.--col-2-even { grid-template-columns: repeat(2, 1fr); }
+    &.--col-3-even { grid-template-columns: repeat(3, 1fr); }
+    &.--col-4-even { grid-template-columns: repeat(4, 1fr); }
+    &.--col-5-even { grid-template-columns: repeat(5, 1fr); }
+    &.--col-6-even { grid-template-columns: repeat(6, 1fr); }
+    &.--col-7-even { grid-template-columns: repeat(7, 1fr); }
+    &.--col-8-even { grid-template-columns: repeat(8, 1fr); }
+    &.--col-9-even { grid-template-columns: repeat(9, 1fr); }
+    &.--col-10-even { grid-template-columns: repeat(10, 1fr); }
+
+    &.--row-1-auto { grid-template-rows: repeat(1, auto); }
+    &.--row-2-auto { grid-template-rows: repeat(2, auto); }
+    &.--row-3-auto { grid-template-rows: repeat(3, auto); }
+    &.--row-4-auto { grid-template-rows: repeat(4, auto); }
+    &.--row-5-auto { grid-template-rows: repeat(5, auto); }
+    &.--row-6-auto { grid-template-rows: repeat(6, auto); }
+    &.--row-7-auto { grid-template-rows: repeat(7, auto); }
+    &.--row-8-auto { grid-template-rows: repeat(8, auto); }
+    &.--row-9-auto { grid-template-rows: repeat(9, auto); }
+    &.--row-10-auto { grid-template-rows: repeat(10, auto); }
+
+    &.--row-1-even { grid-template-rows: repeat(1, 1fr); }
+    &.--row-2-even { grid-template-rows: repeat(2, 1fr); }
+    &.--row-3-even { grid-template-rows: repeat(3, 1fr); }
+    &.--row-4-even { grid-template-rows: repeat(4, 1fr); }
+    &.--row-5-even { grid-template-rows: repeat(5, 1fr); }
+    &.--row-6-even { grid-template-rows: repeat(6, 1fr); }
+    &.--row-7-even { grid-template-rows: repeat(7, 1fr); }
+    &.--row-8-even { grid-template-rows: repeat(8, 1fr); }
+    &.--row-9-even { grid-template-rows: repeat(9, 1fr); }
+    &.--row-10-even { grid-template-rows: repeat(10, 1fr); }
+
+    &.--c-gap-tiny { column-gap: var(--size-tiny); }
+    &.--c-gap-small { column-gap: var(--size-small); }
+    &.--c-gap-large { column-gap: var(--size-large); }
+    &.--c-gap-huge { column-gap: var(--size-huge); }
+    &.--c-gap-gargantuan { column-gap: var(--size-gargantuan); }
+
+    &.--r-gap-tiny { row-gap: var(--size-tiny); }
+    &.--r-gap-small { row-gap: var(--size-small); }
+    &.--r-gap-large { row-gap: var(--size-large); }
+    &.--r-gap-huge { row-gap: var(--size-huge); }
+    &.--r-gap-gargantuan { row-gap: var(--size-gargantuan); }
+
+    &.--c-span-all { grid-column: 1 / -1; }
+    &.--r-span-all { grid-row: 1 / -1; }
+}

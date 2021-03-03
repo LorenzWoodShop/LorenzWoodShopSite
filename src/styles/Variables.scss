@@ -1,0 +1,70 @@
+:root{
+    /*======================================== Sizes ========================================*/
+    /*========== Global ==========*/
+    --size-tiny: 4px;
+    --size-small: 8px;
+    --size-medium: 16px;
+    --size-large: 24px;
+    --size-huge: 32px;
+    --size-gargantuan: 40px;
+
+    --radius-small: 8px;
+    --radius-med-small: 12px;
+    --radius-medium: 16px;
+    --radius-large: 24px;
+
+    --line-small: 1px;
+    --line-medium: 2px;
+    --line-large: 3px;
+
+    /*Background size is 128, the diagonal is 181, midpoint is 91.5, create a 2px wide center line*/
+    --line-size: 88.5px;
+    --line-effect: 92.5px;
+    /*awkward offset gives the triangle effect*/
+    --bg-line-size: 59.5px;
+    --bg-line-effect: 110.5px;
+
+    /*========== WH Dice ==========*/
+    --size-dice: 80px;
+    --small-dice: --size-dice/2;
+    --size-dice-calculated: 15vmin;
+
+    /*======================================== Colors ========================================*/
+    /*========== Global ==========*/
+
+    --col-text-primary: #382f21;
+    --col-text-secondary: #493c29;
+    --col-text-neutral: #333333;
+
+    --col-border-primary: #5e4f37;
+    --col-border-secondary: #493c29;
+    --col-border-neutral: #333333;
+
+    --col-bg-primary: #ffe4c4;
+    --col-bg-secondary: #c4ad92;
+    --col-bg-neutral: #d6c7b4;
+
+    --col-bg-dark: #080808;
+    --col-bg-lite: #171717;
+    --col-bg-extra-lite: #222222;
+    --col-bg-comp: #080808;
+
+    --col-btn-bg-dark: #060606;
+
+    --col-nul: #00000000;
+
+    /*========== WH Dice ==========*/
+    --color-die-pips: #9aa3ff;
+    --color-die-background: #4f5382;
+    --color-die-border: #6e74b5;
+    --color-die-selected-border: #ffa600;
+    --color-die-disabled: #595e935f;
+
+    /*========== Crucible Encounters ==========*/
+    --color-underline: #4f5382;
+
+    /*======================================== Features ========================================*/
+    --border-primary: 2px var(--col-border-primary) solid;
+    --secondary-border: 2px var(--col-border-secondary) solid;
+    --border-neutral: 2px var(--col-border-neutral) solid;
+}

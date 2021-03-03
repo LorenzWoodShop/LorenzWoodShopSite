@@ -1,0 +1,22 @@
+/*
+    We're using a modified BEM + CSS Grid structure for this project.
+        What is modified is just that modifieers are seperated so something like "grid --wide" "nav__item --dark"
+        this lets use the power of SASS to compile things for us, while still writing clean code
+
+    This file should have the changes to the base of our CSS. Changes to a, ul, defaults (border box etc) should go here.
+ */
+html, body, #app {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}

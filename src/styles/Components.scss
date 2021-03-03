@@ -1,0 +1,63 @@
+/*
+    We're using a modified ABEM + CSS Grid structure for this project.
+        What is modified is just that modifieers are seperated so something like "grid --wide" "nav__item --dark"
+        this lets use the power of SASS to compile things for us, while still writing clean code
+
+    This file is for layouts of internal things. They should not define any visual styles, just where things live.
+ */
+
+
+button {
+    border: var(--border-primary);
+    padding: var(--size-small) var(--size-medium);
+    background: var(--col-bg-comp);
+    color: var(--col-text-primary);
+    outline: none;
+    border-radius: var(--radius-small);
+
+    &.--full-width{
+      width: 100%;
+      grid-column: 1 / -1;
+    }
+
+    &:active{
+      transform: translateY(5px);
+    }
+}
+
+input {
+    border: var(--border-primary);
+    padding: 8px 16px;
+    background: var(--col-bg-comp);
+    color: var(--col-text-primary);
+    outline: none;
+    border-radius: var(--radius-small);
+    
+    &.--full-width{
+      width: 100%;
+      grid-column: 1 / -1;
+    }
+}
+
+.card {
+  border-radius: var(--radius-medium);
+  border: var(--border-primary);
+  padding: var(--size-medium);
+
+  .card__header{
+    padding-bottom: var(--size-huge);
+    border-bottom: var(--col-border-primary);
+  }
+
+  .card__body{
+    padding-bottom: var(--size-medium);
+    border-bottom: var(--col-border-primary);
+    padding-top: var(--size-medium);
+    border-top: var(--col-border-primary);
+  }
+
+  .card__footer{
+    padding-top: var(--size-huge);
+    border-top: var(--col-border-primary);
+  }
+}

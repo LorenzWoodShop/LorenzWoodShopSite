@@ -1,0 +1,62 @@
+/*
+    We're using a modified BEM + CSS Grid structure for this project.
+        What is modified is just that modifieers are seperated so something like "grid --wide" "nav__item --dark"
+        this lets use the power of SASS to compile things for us, while still writing clean code
+
+    This file should have the changes to the base of our CSS. Changes to a, ul, defaults (border box etc) should go here.
+ */
+
+
+#app {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: var(--col-text-primary);
+    /*Backround fills in the triangle and diamond*/
+    background: bisque;
+
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    #main-window{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+        padding: var(--size-medium) var(--size-medium);
+
+        & > div {
+            max-height: 100%;
+        }
+    }
+
+    * {
+        transition: .25s ease all;
+    }
+}
+
+a {
+    font-weight: bold;
+    color: #b90097;
+}
+
+#nav a.router-link-exact-active {
+    color: #ff00d0;
+    font-weight: 900;
+}
+
+/*global transitions*/
+.fade-enter-active, .fade-leave-active {
+    transition: ease all .5s;
+}
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+    display: none;
+}
+
+.fade-enter-to, .fade-leave {
+    opacity: 1;
+    display: none;
+}
+  

@@ -8,14 +8,21 @@
     --size-huge: 32px;
     --size-gargantuan: 40px;
 
-    --radius-small: 8px;
-    --radius-med-small: 12px;
-    --radius-medium: 16px;
-    --radius-large: 24px;
+    --radius-small: 4px;
+    --radius-med-small: 6px;
+    --radius-medium: 8px;
+    --radius-large: 12px;
 
     --line-small: 1px;
     --line-medium: 2px;
     --line-large: 3px;
+
+    --font-small: 1rem;
+    --font-medium: 1.6rem;
+    --font-large: 2.4rem;
+    --font-huge: 3rem;
+    --font-gargantuan: 4rem;
+    --font-heckin-chonker: 5rem;
 
     /*Background size is 128, the diagonal is 181, midpoint is 91.5, create a 2px wide center line*/
     --line-size: 88.5px;
@@ -40,8 +47,9 @@
     --col-border-primary: #5e4f37;
     --col-border-secondary: #493c29;
     --col-border-neutral: #333333;
+    --col-border-error: #7c0000;
 
-    --col-bg-primary: #f0e4d6;
+    --col-bg-primary: #ffeedd;
     --col-bg-secondary: #c4ad92;
     --col-bg-neutral: #d6c7b4;
 
@@ -65,7 +73,10 @@
     --color-underline: #4f5382;
 
     /*======================================== Features ========================================*/
-    --border-primary: 2px var(--col-border-primary) solid;
-    --secondary-border: 2px var(--col-border-secondary) solid;
-    --border-neutral: 2px var(--col-border-neutral) solid;
+    --border-primary: 1px var(--col-border-primary) solid;
+    --border-secondary: 1px var(--col-border-secondary) solid;
+    --border-error: 1px var(--col-border-error) solid;
+    --border-neutral: 1px var(--col-border-neutral) solid;
+
+    --box-shadow: 0 2px 4px #00000050;
 }

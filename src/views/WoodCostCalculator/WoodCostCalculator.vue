@@ -1,35 +1,49 @@
 <template>
-    <div class="wood-calculator-app">
-        <div class="input__window">
-            <div class="window__inputs">
-                <label class="error" v-if="errorMessage.trim() !== ''">{{errorMessage}}</label>
-                <label class="input__label">Species</label>        <input v-model="boardName" /><div><!-- Spacer --></div>
-                <label class="input__label">Cost per BF</label>    <input v-model="boardCost" type="number" step=".01"/><label class="input__descriptor">$ / BF</label>
-                <label class="input__label">Width</label>          <input v-model="boardWidth" type="number" step=".01"/><label class="input__descriptor">in.</label>
-                <label class="input__label">Length</label>         <input v-model="boardLength" type="number" step=".01"/><label class="input__descriptor">in.</label>
-                <label class="input__label">Thickness</label>      <input v-model="boardThickness" type="number" step=".01"/><label class="input__descriptor">in.</label>
-                <button @click="AddBoardToCart()">Add</button>
-            </div>
-            <div><!-- Spacer --></div>
+  <div class="full-screen">
+    <h1>Board Cost Calculator</h1>
+    <div class="grid --col-2-even --c-gap-medium">
+      <div>
+        <div class="grid --col-3-auto --c-gap-tiny --r-gap-tiny --full-center">
+          <label class="error" v-if="errorMessage.trim() !== ''">{{ errorMessage }}</label>
+          <label>Species</label>
+          <input v-model="boardName" />
+          <div><!-- Spacer --></div>
+          <label>Cost per BF</label>
+          <input v-model="boardCost" type="number" step=".01" />
+          <span>$ / BF</span>
+          <label>Width</label>
+          <input v-model="boardWidth" type="number" step=".01" />
+          <span>in.</span>
+          <label>Length</label>
+          <input v-model="boardLength" type="number" step=".01" />
+          <span>in.</span>
+          <label>Thickness</label>
+          <input v-model="boardThickness" type="number" step=".01" />
+          <span>in.</span>
+          <button class="--full-width" @click="AddBoardToCart()">Add</button>
         </div>
-        <div class="cart__window">
-            <div class="cart">
-                <h1>Total cost: {{CalculateCartTotal}}$</h1>
-                <div class="cart-item" v-for="thisBoard in cart" v-bind:key="thisBoard.id">
-                    <button @click="RemoveBoardFromCart(thisBoard)">X</button>
-                    <div class="item__details">
-                        <span><strong>{{thisBoard.name}}</strong></span>
-                        <span>Width: {{thisBoard.width}}in.</span>
-                        <span>Length: {{thisBoard.length}}in.</span>
-                        <span>Thickness: {{thisBoard.thickness}}in.</span>
-                        <span>Cost/BF: {{thisBoard.cost}}$</span>
-                        <span>Board Cost: {{thisBoard.totalCost}}$</span>
-                    </div>
-                </div>
+      </div>
+      <div>
+        <div class="grid --col-1-even --r-gap-medium">
+          <span>Total cost: {{ CalculateCartTotal }}$</span>
+          <div class="card grid --col-2-squish --c-gap-small --full-center"
+            v-for="thisBoard in cart"
+            v-bind:key="thisBoard.id"
+          >
+            <button @click="RemoveBoardFromCart(thisBoard)">X</button>
+            <div class="grid --col-1-even --r-gap-small">
+              <span><strong>{{ thisBoard.name }}</strong></span>
+              <span>Width: {{ thisBoard.width }}in.</span>
+              <span>Length: {{ thisBoard.length }}in.</span>
+              <span>Thickness: {{ thisBoard.thickness }}in.</span>
+              <span>Cost/BF: {{ thisBoard.cost }}$</span>
+              <span>Board Cost: {{ thisBoard.totalCost }}$</span>
             </div>
-            <div><!-- Spacer --></div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 <script lang="ts" src="./script.ts"></script>
 <style lang="scss" src="./style.scss"></style>

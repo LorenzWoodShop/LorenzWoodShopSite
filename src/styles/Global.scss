@@ -6,57 +6,93 @@
     This file should have the changes to the base of our CSS. Changes to a, ul, defaults (border box etc) should go here.
  */
 
-
 #app {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: var(--col-text-primary);
-    /*Backround fills in the triangle and diamond*/
-    background: var(--col-bg-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: var(--col-text-primary);
+  /*Backround fills in the triangle and diamond*/
+  background: var(--col-bg-primary);
 
-    display: grid;
-    grid-template-rows: 1fr auto;
+  display: grid;
+  grid-template-rows: 1fr auto;
 
-    #main-window{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: auto;
-        padding: var(--size-medium) var(--size-medium);
+  #main-window {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: var(--size-medium) var(--size-medium);
 
-        & > div {
-            max-height: 100%;
-        }
+    & > div {
+      max-height: 100%;
     }
+  }
 
-    * {
-        transition: .25s ease all;
-    }
+  * {
+    transition: 0.15s ease all;
+  }
 }
 
 a {
-    font-weight: bold;
-    color: var(--col-text-link);
+  font-weight: bold;
+  color: var(--col-text-link);
+}
+
+button {
+  border: var(--border-primary);
+  padding: var(--size-small) var(--size-medium);
+  background: var(--col-bg-secondary);
+  color: var(--col-text-primary);
+  border-radius: var(--radius-small);
+  margin: var(--size-tiny);
+  box-shadow: var(--box-shadow);
+  font-size: var(--font-medium);
+  font-weight: bold;
+
+  &:active {
+    transform: translateY(3px);
+  }
+}
+
+input {
+  border: var(--border-primary);
+  padding: 8px 16px;
+  background: var(--col-bg-secondary);
+  color: var(--col-text-primary);
+  border-radius: var(--radius-small);
+  margin: var(--size-tiny);
+  box-shadow: var(--box-shadow);
+}
+
+.--full-width{
+  width: 100%;
+  grid-column: 1 / -1;
 }
 
 #nav a.router-link-exact-active {
-    color: var(--col-text-link);
-    font-weight: 900;
+  color: var(--col-text-link);
+  font-weight: 900;
 }
 
 /*global transitions*/
-.fade-enter-active, .fade-leave-active {
-    transition: ease all .5s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: ease all 0.5s;
 }
 
-.fade-enter, .fade-leave-to {
-    opacity: 0;
-    display: none;
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+  display: none;
 }
 
-.fade-enter-to, .fade-leave {
-    opacity: 1;
-    display: none;
+.fade-enter-to,
+.fade-leave {
+  opacity: 1;
+  display: none;
 }
-  
+
+.error {
+  border: var(--border-error);
+}

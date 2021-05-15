@@ -60,6 +60,10 @@
     &.--row-9-even { grid-template-rows: repeat(9, 1fr); }
     &.--row-10-even { grid-template-rows: repeat(10, 1fr); }
 
+    &.--col-2-squish { grid-template-columns: repeat(1, auto 1fr); }
+    &.--col-4-squish { grid-template-columns: repeat(2, auto 1fr); }
+    &.--col-6-squish { grid-template-columns: repeat(6, auto 1fr); }
+
     &.--c-gap-tiny { column-gap: var(--size-tiny); }
     &.--c-gap-small { column-gap: var(--size-small); }
     &.--c-gap-large { column-gap: var(--size-large); }
@@ -72,6 +76,9 @@
     &.--r-gap-huge { row-gap: var(--size-huge); }
     &.--r-gap-gargantuan { row-gap: var(--size-gargantuan); }
 
-    &.--c-span-all { grid-column: 1 / -1; }
-    &.--r-span-all { grid-row: 1 / -1; }
+    &.--full-center {align-items: center; justify-items: center;}
+    &.--top-right {align-items: top; justify-items: center;}
+
+    & .--c-span-all { grid-column: 1 / -1; }
+    & .--r-span-all { grid-row: 1 / -1; }
 }

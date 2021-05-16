@@ -1,6 +1,7 @@
 <template>
   <div id="app" >
     <!-- navigation pane -->
+    <Nav/>
     <div id="main-window">
       <transition name="fade">
         <router-view />

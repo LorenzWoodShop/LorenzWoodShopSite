@@ -15,7 +15,7 @@
   background: var(--col-bg-primary);
 
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto 1fr auto;
 
   #main-window {
     display: flex;

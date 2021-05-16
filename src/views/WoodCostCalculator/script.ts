@@ -23,9 +23,11 @@ export default class WoodCostCalculator extends Vue {
     }
 
     AddBoardToCart(){
-        if(this.boardName === '' || this.boardCost === 0 || this.boardWidth === 0 || this.boardLength === 0 || this.boardThickness === 0){
-            this.errorMessage = "No blank name, no 0's!";
-        } else {
+        if(this.boardName === ''){
+            this.errorMessage = "Species is blank";
+        } else if ( this.boardCost === 0 || this.boardWidth === 0 || this.boardLength === 0 || this.boardThickness === 0){
+          this.errorMessage = "An input is 0";
+        }else {
             this.errorMessage = '';
             const thisTotalCost:number = Number((((this.boardThickness * this.boardWidth * this.boardLength) / 144) * this.boardCost).toFixed(2));
             const newBoard:Board = {
@@ -44,20 +46,5 @@ export default class WoodCostCalculator extends Vue {
 
     RemoveBoardFromCart(thisBoard: Board){
         this.cart = this.cart.filter(board => board.id !== thisBoard.id);
-    }
-
-    mounted() {
-        this.$root.$emit('set-info', {
-            title: "Wood Cost Calculator",
-            info:
-                `Wood cost is calculated by volume, and is not easy to do by hand so I wrote a calculator. There are many like it, but this one is mine.
-
-Here's how to calculate wood costs. 1 board foot is an amount of wood, by volume, equaling 12 inches, by 12 inches, by 1 inch. So our cost calculation is:
-
-((width * length * thickness) / 144) * cost
-
-Keep in mind that most places list thickness as quarters of an inch, and be sure to measure your boards. A 4/4 board may not be exactly 1 inch thick, but that's what you're getting charged.
-This is because boards are rough cut at 1 inch thick, then planed down to a nice usable board.`
-        });
     }
 }

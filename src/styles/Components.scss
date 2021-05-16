@@ -6,10 +6,17 @@
     This file is for individual components. These are reusable all over the site.
  */
 
+.h1{
+  font-weight: bold;
+  font-size: var(--font-huge);
+}
+
 .card {
+  background: var(--col-bg-light);
   border-radius: var(--radius-medium);
   border: var(--border-secondary);
   padding: var(--size-medium);
+  box-shadow: var(--box-shadow);
 
   & .card__header{
     padding-bottom: var(--size-huge);

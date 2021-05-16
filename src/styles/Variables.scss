@@ -24,18 +24,6 @@
     --font-gargantuan: 4rem;
     --font-heckin-chonker: 5rem;
 
-    /*Background size is 128, the diagonal is 181, midpoint is 91.5, create a 2px wide center line*/
-    --line-size: 88.5px;
-    --line-effect: 92.5px;
-    /*awkward offset gives the triangle effect*/
-    --bg-line-size: 59.5px;
-    --bg-line-effect: 110.5px;
-
-    /*========== WH Dice ==========*/
-    --size-dice: 80px;
-    --small-dice: --size-dice/2;
-    --size-dice-calculated: 15vmin;
-
     /*======================================== Colors ========================================*/
     /*========== Global ==========*/
 
@@ -43,34 +31,21 @@
     --col-text-secondary: #493c29;
     --col-text-neutral: #333333;
     --col-text-link: #35356e;
+    --col-text-error: #550000;
 
     --col-border-primary: #5e4f37;
     --col-border-secondary: #493c29;
     --col-border-neutral: #333333;
-    --col-border-error: #7c0000;
+    --col-border-error: #770000;
 
     --col-bg-primary: #ffeedd;
-    --col-bg-secondary: #c4ad92;
-    --col-bg-neutral: #d6c7b4;
+    --col-bg-secondary: #ccbbaa;
+    --col-bg-white: #fafafa;
+    --col-bg-light: #fff9ee;
 
-    --col-bg-dark: #080808;
-    --col-bg-lite: #171717;
-    --col-bg-extra-lite: #222222;
-    --col-bg-comp: #080808;
-
-    --col-btn-bg-dark: #060606;
+    --col-bg-error: #ffaaaa;
 
     --col-nul: #00000000;
-
-    /*========== WH Dice ==========*/
-    --color-die-pips: #9aa3ff;
-    --color-die-background: #4f5382;
-    --color-die-border: #6e74b5;
-    --color-die-selected-border: #ffa600;
-    --color-die-disabled: #595e935f;
-
-    /*========== Crucible Encounters ==========*/
-    --color-underline: #4f5382;
 
     /*======================================== Features ========================================*/
     --border-primary: 1px var(--col-border-primary) solid;

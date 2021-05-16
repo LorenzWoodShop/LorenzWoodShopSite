@@ -10,6 +10,4 @@
   </div>
 </template>
 <script lang="ts" src="./App.ts"></script>
-<style lang="scss" src="./styles/Base.scss"></style>
-<style lang="scss" src="./styles/Layout.scss"></style>
-<style lang="scss" src="./styles/Global.scss"></style>
+<style lang="scss" src="./styles/App.scss"></style>

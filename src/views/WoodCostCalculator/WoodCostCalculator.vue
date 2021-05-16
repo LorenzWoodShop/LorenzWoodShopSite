@@ -1,10 +1,11 @@
 <template>
   <div class="full-screen">
     <h1>Board Cost Calculator</h1>
-    <div class="grid --col-2-even --c-gap-medium">
+    <div class="grid --mobile --col-2-even --c-gap-medium">
       <div>
-        <div class="grid --col-3-auto --c-gap-tiny --r-gap-tiny --full-center">
-          <label class="error" v-if="errorMessage.trim() !== ''">{{ errorMessage }}</label>
+        <div class="card grid --col-3-auto --c-gap-tiny --r-gap-tiny --full-center">
+          <span class="h1 card__header --full-width">Add a board</span>
+          <label class="error --full-width" v-if="errorMessage.trim() !== ''">{{ errorMessage }}</label>
           <label>Species</label>
           <input v-model="boardName" />
           <div><!-- Spacer --></div>
@@ -25,19 +26,19 @@
       </div>
       <div>
         <div class="grid --col-1-even --r-gap-medium">
-          <span>Total cost: {{ CalculateCartTotal }}$</span>
-          <div class="card grid --col-2-squish --c-gap-small --full-center"
+          <span class="card h1">Total cost: {{ CalculateCartTotal }}$</span>
+          <div class="card grid --col-2-squish --full-center"
             v-for="thisBoard in cart"
             v-bind:key="thisBoard.id"
           >
             <button @click="RemoveBoardFromCart(thisBoard)">X</button>
-            <div class="grid --col-1-even --r-gap-small">
+            <div class="grid --col-2-even --r-gap-small">
               <span><strong>{{ thisBoard.name }}</strong></span>
               <span>Width: {{ thisBoard.width }}in.</span>
-              <span>Length: {{ thisBoard.length }}in.</span>
-              <span>Thickness: {{ thisBoard.thickness }}in.</span>
               <span>Cost/BF: {{ thisBoard.cost }}$</span>
+              <span>Length: {{ thisBoard.length }}in.</span>
               <span>Board Cost: {{ thisBoard.totalCost }}$</span>
+              <span>Thickness: {{ thisBoard.thickness }}in.</span>
             </div>
           </div>
         </div>

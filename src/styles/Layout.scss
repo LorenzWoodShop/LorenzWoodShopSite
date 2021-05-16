@@ -5,13 +5,11 @@
 
     This file is for layouts of internal things. They should not define any visual styles, just where things live.
  */
-.full-screen {
-    width: 100%;
+.full-size {
     height: 100%;
-    padding: var(--size-large);
-    @media screen and #{$max-sm} {
-      padding: 0;
-    }
+    min-width: 100%;
+    position: absolute;
+    padding: inherit;
 }
 
 .grid {

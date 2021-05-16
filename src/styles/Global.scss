@@ -21,8 +21,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: auto;
-    padding: var(--size-medium) var(--size-medium);
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: var(--size-large) var(--size-gargantuan);
+    @media screen and #{$max-sm} {
+      padding: var(--size-small);
+    }
 
     & > div {
       max-height: 100%;
@@ -76,24 +81,6 @@ input {
   font-weight: 900;
 }
 
-/*global transitions*/
-.fade-enter-active,
-.fade-leave-active {
-  transition: ease all 0.5s;
-}
-
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
-  display: none;
-}
-
-.fade-enter-to,
-.fade-leave {
-  opacity: 1;
-  display: none;
-}
-
 .error {
   border: var(--border-error);
   background: var(--col-bg-error);
@@ -101,4 +88,32 @@ input {
   color: var(--col-text-error);
   border-radius: var(--radius-medium);
   padding: var(--size-small) var(--size-medium);
+}
+
+/*global transitions*/
+.fade-enter-active,
+.fade-leave-active {
+  position: absolute;
+
+  &.full-screen{
+    padding: var(--size-huge);
+  }
+}
+
+//where entering thing starts from
+.fade-enter-active{
+  opacity: 0;
+}
+
+//where the entering thing ends/leaving thing starts
+.fade-enter-to,
+.fade-leave-active {
+  transition: opacity .35s ease .35s !important; //transition with delay
+  opacity: 1;
+}
+
+//where the leaving thing goes
+.fade-leave-to {
+  transition: opacity .35s ease !important;
+  opacity: 0;
 }
